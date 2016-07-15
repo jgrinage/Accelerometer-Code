@@ -1,37 +1,27 @@
-node.js sample
-==============
+Connect BBB to Internet Over USB
 
-Prepare the BeagleBone Black 
-----------------------------
-
-There are a few tasks to complete to prepare your BeagleBone for connection to the IoT Cloud.
-
-1. Get Debian Linux for your BeagleBone.
-   This operating system will be supplied with Rev C BBBs.
-   You can install Debian Linux on a Micro SD card and boot the BeagleBone from there.
-   For downloading Debian Linux and booting from a Micro SD card, see http://beagleboard.org/latest-images.
-2. With Debian Linux running, connect your BeagleBone to a Windows or Linux or Mac computer, using the supplied USB cable.
-   If you are using a Windows or Mac, you need to install some drivers to access your BeagleBone, see http://beagleboard.org/Getting%20Started.
-3. Run SSH on your computer and login as root to the BeagleBone at 192.168.7.2 using the USB point to point network link.
-4. Insert the USB BLE addaptor into the USB socket and confirm that the SensorTag can be detected using *hcitool lescan*, you will have to press the side button on the SensorTag.
-5. You also need the BeagleBone to have internet access, this can be gatewayed over the USB link or provided separately through the BeagleBone Ethernet port.
-
-Now you are ready to install the sample and connect to the IBM Internet of Things Cloud Quickstart service.
-
-Connect
--------
-
-1. Log in to Debian as root (by default, no password is required).
-2. Clone the GitHub project: __git clone https://github.com/ibm-messaging/iot-beaglebone__
-3. __cd iot-beaglebone/samples/nodejs__
-4. Run __./setup.sh__. This completes the following tasks:
-   Installs required node packages – async, sensortag, MQTT, properties – using npm.
-5. Now run the sample with: node iot_sensortag.js
-
-+ This sample runs in the foreground and will need to be restarted if the connection is lost or the SensorTag disconnects.
-+ Press the button on the side of the SensorTag so that it starts sending sensor data to the IBM Internet of Things Cloud Quickstart service.
-+ The sample will display the MAC address on the console. Enter the MAC address at the [quickstart site](http://quickstart.internetofthings.ibmcloud.com) to see a visualisation of the sensor data.
-+ The LED nearest the ethernet socket LED 3 will flash each time a message is sent.
+1.View Network Connections
+2.Select WiFi Network that you want to share internet from,right click to access properties, navigate to Sharing Tab, deselect the sharing box
+3.Click OK, then re-select WiFi Network, properties, sharing tab, select sharing box , specify BBB ethernet connection, then click OK and exit
+4.Click on ethernet for BBB, double click IPV4, select “obtain DNS automatically” and “obtain IP automatically”
 
 
+Run Accelerometer Code On BBB
+
+1. Open PuTTy
+   a.Login as root
+   b.Type: /sbin/route add default gw 192.168.7.1
+   c.Type: ping 8.8.8.8  // should properly ping, if not, troubleshoot before moving on   
+   d.Type: git clone https://github.com/jgrinage/Accelerometer-Code.git
+   e.Navigate to directory with accel.js file
+   f.Type: node sensortagAccelerometer.js
+2. Make sure sensortag is on, then click the side button to connect it to the BBB
+3. Data is now being sent to the sever
+
+
+Note: make sure sensortag works by double checking that your SensorTag phone app can see it.
+
+If you get stuck, try making sure that the bluetooth adapter is turned on by running hciconfig to see if it’s “down” or “up running pscan”. If down, run in PuTTy “sudo hciconfig hci0 up”
+
+If sensortag is acting up and not connecting in step 2, hold both side buttons for 6 seconds, let go, you will hear a noise indicating that it has been reset to default settings; this generally solves my problems
 
