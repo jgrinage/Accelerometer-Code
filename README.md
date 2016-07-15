@@ -1,6 +1,7 @@
 Connect BBB to Internet Over USB
 
 
+
 1.  View Network Connections
 
 2.  Select WiFi Network that you want to share internet from,right click to access properties, navigate to Sharing Tab, deselect the sharing box
@@ -14,9 +15,8 @@ Connect BBB to Internet Over USB
 Run Accelerometer Code On BBB
 
 
-Prerequisites: 
-   
-   Make sure BBB can access internet, bluetooth adapter is connected to BBB and the proper bluetooth packages have been install
+
+Prerequisites: Make sure BBB can access internet, bluetooth adapter is connected to BBB and the proper bluetooth packages have been                   install
 
 
 1. Open PuTTy
@@ -41,6 +41,7 @@ Prerequisites:
 2.  Make sure sensortag is on, then click the side button to connect it to the BBB
       
     Note: make sure sensortag works by double checking that your SensorTag phone app can see it.
+
     Additionally: if sensortag is acting up and not connecting in step 2, hold both side buttons for 6 seconds, let go, you will hear a               noise indicating that it has been reset to default settings; this generally solves my problems
    
 
