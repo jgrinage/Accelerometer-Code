@@ -16,7 +16,7 @@ Run Accelerometer Code On BBB
 
 
 
-Prerequisites: Make sure BBB can access internet, bluetooth adapter is connected to BBB and the proper bluetooth packages have been                   install
+Prerequisites: Make sure BBB can access internet, bluetooth adapter is connected to BBB and the proper bluetooth packages have been                   installed 
 
 
 1. Open PuTTy
