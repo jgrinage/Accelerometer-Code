@@ -1,0 +1,19 @@
+{
+  "name": "iot_sensortag",
+  "description": "IBM Internet of Things cloud client example",
+  "homepage": "http://internetofthings.ibmcloud.com",
+  "repository" : {
+    "type" : "git",
+  	"url" : "http://github.com/ibm-messaging/iot-beaglebone.git"
+  },
+  "author": "IBM",
+  "dependencies": {
+    "async": "0.7.0",
+    "getmac": "1.0.6",
+    "mqtt": "0.3.12",
+    "sensortag": "1.0.0",
+    "properties": "1.2.1",
+    "request": "2.0.1"
+  },
+  "engine": "node >= 0.10.0"
+}
