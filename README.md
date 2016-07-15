@@ -24,15 +24,15 @@ Run Accelerometer Code On BBB
    
    d.  Type: git clone https://github.com/jgrinage/Accelerometer-Code.git
    
-   e.Navigate to directory with accel.js file
+   e.  Navigate to directory with accel.js file
    
-   f.Type: node sensortagAccelerometer.js
+   f.  Type: node sensortagAccelerometer.js
    
    
-2. Make sure sensortag is on, then click the side button to connect it to the BBB
+2.  Make sure sensortag is on, then click the side button to connect it to the BBB
 
 
-3. Data is now being sent to the sever
+3.  Data is now being sent to the sever
 
 
 
