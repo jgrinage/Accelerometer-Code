@@ -1,25 +1,28 @@
 Connect BBB to Internet Over USB
 
-1.View Network Connections
 
-2.Select WiFi Network that you want to share internet from,right click to access properties, navigate to Sharing Tab, deselect the sharing box
+1.  View Network Connections
 
-3.Click OK, then re-select WiFi Network, properties, sharing tab, select sharing box , specify BBB ethernet connection, then click OK and exit
+2.  Select WiFi Network that you want to share internet from,right click to access properties, navigate to Sharing Tab, deselect the sharing box
 
-4.Click on ethernet for BBB, double click IPV4, select “obtain DNS automatically” and “obtain IP automatically”
+3.  Click OK, then re-select WiFi Network, properties, sharing tab, select sharing box , specify BBB ethernet connection, then click OK and exit
+
+4.  Click on ethernet for BBB, double click IPV4, select “obtain DNS automatically” and “obtain IP automatically”
+
 
 
 Run Accelerometer Code On BBB
 
+
 1. Open PuTTy
 
-   a.Login as root
+   a.  Login as root
 
-   b.Type: /sbin/route add default gw 192.168.7.1
+   b.  Type: /sbin/route add default gw 192.168.7.1
    
-   c.Type: ping 8.8.8.8  // should properly ping, if not, troubleshoot before moving on
+   c.  Type: ping 8.8.8.8  // should properly ping, if not, troubleshoot before moving on
    
-   d.Type: git clone https://github.com/jgrinage/Accelerometer-Code.git
+   d.  Type: git clone https://github.com/jgrinage/Accelerometer-Code.git
    
    e.Navigate to directory with accel.js file
    
